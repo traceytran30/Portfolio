@@ -11,8 +11,6 @@ mean(df$Age)
 sd(df$Age)
 cor(df$Age, df$Outcome)
 range(df$Age)[2] - range(df$Age)[1]
-plot(df$Age, df$Outcome, xlab = "Age (in years)", ylab = "Presence of Diabetes", 
-     main = "Age vs Length of Stay")
 
 mean(df$Pregnancies)
 sd(df$Pregnancies)
@@ -86,4 +84,13 @@ diabetespedigree_partial_r = (base_sse - diabetespedigree_sse) / base_sse
 
 F = ((base_sse - glucose_sse) / (glucose_sse / (n-2)))
 
+plot(df$Age)
+plot(df$Glucose)
+plot(df$Age, df$Glucose)
+plot(df$Age, df$Outcome)
+plot(df$Glucose, df$Outcome)
+
+library(ggplot2)
+ggplot(df, aes(x = df$Age)) + geom_histogram(binwidth = 2, color = "black", fill = "blue") + facet_grid(df$Outcome ~.) + ggtitle("Presence of Diabetes by Age")
+ggplot(df, aes(x = df$Glucose)) + geom_histogram(binwidth = 2, color = "black", fill = "blue") + facet_grid(df$Outcome ~.) + ggtitle("Presence of Diabetes by Glucose Levels")
 
