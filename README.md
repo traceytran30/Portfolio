@@ -6,7 +6,8 @@ Hi there, my name is Tracey Tran and I am currently a university student double 
 
 # Table of Contents
 1. Heart Attack Prediction Analysis (Microsoft Excel only)
-2. Diabetes Analysis (R only) // CURRENT WORK-IN-Progress
+2. Diabetes Analysis (R only)
+3. // CURRENT WORK-IN-Progress
 
 ## Project 1: Heart Attack Analysis
 This project is an analysis of data on factors that increase the risk of a heart attack. It is done completely in Microsoft Excel and utilizes pivot tables and bar graphs.
