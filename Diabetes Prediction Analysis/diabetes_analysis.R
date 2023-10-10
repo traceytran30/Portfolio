@@ -82,7 +82,7 @@ diabetespedigree_e = df$Outcome - (diabetespedigree_model$coefficients[1] + diab
 diabetespedigree_sse = sum(diabetespedigree_e^2)
 diabetespedigree_partial_r = (base_sse - diabetespedigree_sse) / base_sse
 
-F = ((base_sse - glucose_sse) / (glucose_sse / (n-2)))
+anova(base_model, glucose_model)
 
 plot(df$Age)
 plot(df$Glucose)
